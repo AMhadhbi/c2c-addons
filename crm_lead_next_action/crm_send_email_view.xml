@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+       <record model="ir.ui.view" id="crm_send_new_mail_view">
+            <field name="name">specific_fct.crm.new.send.mail.form</field>
+            <field name="model">mail.compose.message</field>
+            <field name="inherit_id" ref="mail.email_compose_message_wizard_form" />
+            <field name="arch" type="xml">
+                <field name="body" position="before">
+                	<group>
+	                    <field name="title_action" />
+	                    <field name="date_action" />
+                    </group>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>
